@@ -1,0 +1,50 @@
+{
+  "name": "ww-auth-webpack-plugin",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "企业微信鉴权webpack插件",
+  "main": "dist/ww-auth-webpack-plugin.cjs",
+  "module": "dist/ww-auth-webpack-plugin.mjs",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/ww-auth-webpack-plugin.cjs",
+      "import": "./dist/ww-auth-webpack-plugin.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "ts-node ./src/index.ts",
+    "prebuild": "rimraf ./dist",
+    "build": "pnpm prebuild && microbundle -o ./dist/ --sourcemap false",
+    "lib:test": "jest",
+    "lint": "eslint --fix --cache --cache-location '../../' --max-warnings 20 --ext .ts,.tsx,.js,.jsx ./src/"
+  },
+  "keywords": [
+    "wecom",
+    "wechat",
+    "auth"
+  ],
+  "author": "wuwhs",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "README.md",
+    "types",
+    "src"
+  ],
+  "dependencies": {
+    "axios": "^1.6.2",
+    "sha1": "^1.1.1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.3",
+    "microbundle": "^0.15.1",
+    "rimraf": "^5.0.5",
+    "vite": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuwhs/ww-auth-webpack-plugin"
+  }
+}
