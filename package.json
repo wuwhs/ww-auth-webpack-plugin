@@ -1,6 +1,6 @@
 {
   "name": "ww-auth-webpack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "企业微信鉴权webpack插件",
   "main": "dist/ww-auth-webpack-plugin.cjs",
